@@ -29,6 +29,7 @@
      (s/fdef 1)))
 
 (put 'defcomponent 'clojure-doc-string-elt 2)
+(put 'defapi 'clojure-doc-string-elt 2)
 
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
@@ -38,3 +39,17 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
 (load-theme 'noctilux t)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (clojure-mode rainbow-delimiters paredit noctilux-theme company cider better-defaults))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
