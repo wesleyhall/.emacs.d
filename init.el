@@ -10,11 +10,14 @@
 (package-refresh-contents)
 
 (package-install 'better-defaults)
+(package-install 'all-the-icons)
 (package-install 'clojure-mode)
 (package-install 'cider)
 (package-install 'paredit)
 (package-install 'rainbow-delimiters)
 (package-install 'company)
+(package-install 'projectile)
+(package-install 'neotree)
 (package-install 'noctilux-theme)
 
 (setq ring-bell-function 'ignore)
@@ -37,6 +40,9 @@
 (add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
 
 (add-hook 'after-init-hook 'global-company-mode)
+
+(projectile-global-mode)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 (load-theme 'noctilux t)
 (custom-set-variables
