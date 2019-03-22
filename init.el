@@ -1,3 +1,5 @@
+(set-frame-parameter nil 'fullscreen 'fullboth)
+
 (package-initialize)
 
 (require 'package)
@@ -18,10 +20,10 @@
 (package-install 'company)
 (package-install 'projectile)
 (package-install 'neotree)
+(package-install 'terraform-mode)
 (package-install 'noctilux-theme)
 
 (setq ring-bell-function 'ignore)
-(set-frame-parameter nil 'fullscreen 'fullboth)
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
 
 (setq make-backup-files nil)
@@ -35,14 +37,23 @@
 (put 'defapi 'clojure-doc-string-elt 2)
 
 (add-hook 'clojure-mode-hook 'paredit-mode)
+(add-hook 'clojure-mode-hook
+	  (lambda () (local-set-key (kbd "C-c C-n") (kbd "C-u C-c M-z"))))
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
 
 (add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'after-init-hook 'projectile-global-mode)
 
-(projectile-global-mode)
+(setq cider-repl-pop-to-buffer-on-connect 'display-only)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-toggle-window-keep-p t)
+(setq neo-smart-open t)
+(setq projectile-switch-project-action 'neotree-projectile-action)
+
+(global-set-key (kbd "C-x t") 'neotree-toggle)
+(global-set-key (kbd "C-x C-t") 'neotree-show)
 
 (load-theme 'noctilux t)
 (custom-set-variables
