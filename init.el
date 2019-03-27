@@ -21,6 +21,7 @@
 (package-install 'projectile)
 (package-install 'neotree)
 (package-install 'terraform-mode)
+(package-install 'magit)
 (package-install 'noctilux-theme)
 
 (setq ring-bell-function 'ignore)
@@ -51,6 +52,7 @@
 (setq neo-toggle-window-keep-p t)
 (setq neo-smart-open t)
 (setq projectile-switch-project-action 'neotree-projectile-action)
+(setq cider-clojure-cli-global-options "-A:cider")
 
 (global-set-key (kbd "C-x t") 'neotree-toggle)
 (global-set-key (kbd "C-x C-t") 'neotree-show)
