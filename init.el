@@ -52,7 +52,7 @@
 (setq neo-toggle-window-keep-p t)
 (setq neo-smart-open t)
 (setq projectile-switch-project-action 'neotree-projectile-action)
-(setq cider-clojure-cli-global-options "-A:cider")
+(setq cider-clojure-cli-global-options "-A:cider:dev")
 
 (global-set-key (kbd "C-x t") 'neotree-toggle)
 (global-set-key (kbd "C-x C-t") 'neotree-show)
