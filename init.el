@@ -22,7 +22,7 @@
 (package-install 'neotree)
 (package-install 'terraform-mode)
 (package-install 'magit)
-(package-install 'noctilux-theme)
+(package-install 'clues-theme)
 
 (setq ring-bell-function 'ignore)
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
@@ -57,7 +57,7 @@
 (global-set-key (kbd "C-x t") 'neotree-toggle)
 (global-set-key (kbd "C-x C-t") 'neotree-show)
 
-(load-theme 'noctilux t)
+(load-theme 'clues t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
