@@ -57,6 +57,9 @@
 (global-set-key (kbd "C-x t") 'neotree-toggle)
 (global-set-key (kbd "C-x C-t") 'neotree-show)
 
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 (load-theme 'clues t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
