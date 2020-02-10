@@ -22,13 +22,16 @@
 (package-install 'neotree)
 (package-install 'terraform-mode)
 (package-install 'magit)
-(package-install 'clues-theme)
+(package-install 'solarized-theme)
+(package-install 'exec-path-from-shell)
 
 (setq ring-bell-function 'ignore)
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+
+(set-default-font "Monospace-18")
 
 (eval-after-load 'clojure-mode
   '(define-clojure-indent
@@ -60,7 +63,7 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-(load-theme 'clues t)
+(load-theme 'solarized-dark t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -68,7 +71,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (clojure-mode rainbow-delimiters paredit noctilux-theme company cider better-defaults))))
+    (exec-path-from-shell solarized-theme magit terraform-mode neotree projectile all-the-icons clojure-mode rainbow-delimiters paredit noctilux-theme company cider better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
