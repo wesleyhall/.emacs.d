@@ -56,9 +56,12 @@
 (setq neo-smart-open t)
 (setq projectile-switch-project-action 'neotree-projectile-action)
 (setq cider-clojure-cli-global-options "-A:cider:dev")
+(setq company-idle-delay nil)
+(setq company-require-match 'never)
 
 (global-set-key (kbd "C-x t") 'neotree-toggle)
 (global-set-key (kbd "C-x C-t") 'neotree-show)
+(global-set-key (kbd "TAB") 'company-indent-or-complete-common)
 
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
