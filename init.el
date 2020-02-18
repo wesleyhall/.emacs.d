@@ -55,7 +55,6 @@
 (setq neo-toggle-window-keep-p t)
 (setq neo-smart-open t)
 (setq projectile-switch-project-action 'neotree-projectile-action)
-(setq cider-clojure-cli-global-options "-A:cider:dev")
 (setq company-idle-delay nil)
 (setq company-require-match 'never)
 
