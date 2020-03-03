@@ -73,7 +73,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (exec-path-from-shell solarized-theme magit terraform-mode neotree projectile all-the-icons clojure-mode rainbow-delimiters paredit noctilux-theme company cider better-defaults))))
+    (clojure-mode terraform-mode solarized-theme rainbow-delimiters projectile paredit neotree magit exec-path-from-shell company cider better-defaults all-the-icons))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
