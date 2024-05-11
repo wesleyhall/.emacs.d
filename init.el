@@ -24,6 +24,7 @@
 (package-install 'magit)
 (package-install 'solarized-theme)
 (package-install 'exec-path-from-shell)
+(package-install 'yaml-mode)
 
 (setq ring-bell-function 'ignore)
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
